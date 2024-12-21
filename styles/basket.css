@@ -1,0 +1,34 @@
+.contentTotal {
+    display: flex;
+    flex-direction: row;
+    background-color: black; /*content_wrapper*/
+}
+
+.contentRestaurant {
+    width: calc(100% - 308px);
+    /*padding: 16px;*/ /*content*/
+    background-color: white;
+}
+
+/*.test_content {
+    padding: 32px;
+    font-size: 48px;
+    height: 1500px;
+    width: 100%;
+    background-color: yellow;
+}*/
+
+.basketStickyrail {
+    width: 300px;
+    flex-grow: 1;
+    border: 5px solid green;
+    padding: 16px; /*basket_wrapper*/
+}
+
+.basket {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    position: sticky;
+    top: 0; /*basket*/
+}
