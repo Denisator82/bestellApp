@@ -16,26 +16,38 @@
     <link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
+<body onload="init()">
     <section class="header">
         <img class="headerLogo" src="assets/icons/logo/Logo.png">
     </section>
     <section class="contentTotal">
         <div class="contentRestaurant">
-            <img class="contentRestaurantImage" src="assets/img/pizzaRestaurant.jpg">
-            <div class="contentRestaurantHead">
-                
+            <img class="contentRestaurantImage" src="assets/img/pizzaRestaurant.jpg" alt="bildDesPizzaRestaurant">
+            <div class="contentRestaurantHead">    
             </div>
             <div class="contentRestaurantTitelbox">
                 <h1>Pizzaria da Maldini</h1>
                 <div class="restaurantRating">Bewertung (4,2 von 5 Sternen)</div>
             </div>
-            <div class="contentRestaurantNavbar"></div>
-            <div class="contentRestaurantCategory"></div>
-            <div class="contentRestaurantCategory"></div>
+            <div class="contentRestaurantNavbar">
+                <a href="#pizza" class="nav-link">Pizza</a>
+                <a href="#pasta" class="nav-link">Pasta</a>
+            </div>
+                <div class="contentRestaurantCategoryPizza">
+                    <h2>Pizza</h2>
+                    <img class="contentCategoryPizzaImg" src="assets/img/pizza.jpg" alt="pizza">
+                    <div id="pizza">
+                    </div>
+                </div>
+                <div class="contentRestaurantCategoryPasta">
+                    <h2>Pasta</h2>
+                    <img class="contentCategoryPastaImg" src="assets/img/pasta.jpg" alt="pasta">
+                    <div id="pasta">
+                    </div>
+                </div>
         </div>    
         <div class="basketStickyrail">
-            <div class="basket">Warenkorb</div>
+            <div class="basket"><h1>Warenkorb</h1></div>
         </div>
         <div id="basketResponsive" class="basketResponsive basketResponsiveOpen">
         </div>

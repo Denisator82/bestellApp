@@ -1,27 +1,22 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
-    background-color: #FFA500;
 }
 
-.body {
+body {
+    background-color: #FFA500;
     min-height: 100vh;
+
 }
 
 .headerLogo {
     width: 200px;
-    padding: 25px;
+    padding: 20px;
     display: flex;
 }
 
-.contentTotal {
-    background-color: white;
-    color: black;
-}
-
 .contentRestaurantTitelbox {
-    padding-left: 25px;
-    background-color: white;
+    padding: 20px;
 }
 
 .contentRestaurantImage {
@@ -32,18 +27,57 @@
 
 .restaurantRating {
     color: #FFA500;
-    background-color: white;
 }
 
 h1 {
+    padding-bottom: 10px;
+}
+
+.contentRestaurantNavbar { 
+    display: flex; 
+    gap: 20px; 
+    background-color: #E5E4E2; 
+    padding: 5px 10px 5px 10px;
+    width: 100%;
+} 
+
+.nav-link { 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: bold; 
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+}
+
+.nav-link:hover { 
     background-color: white;
+    color: #FFA500;
 }
 
 .contentRestaurantCategory {
-    display: flex
-    ;
-        flex-direction: column;
-        background-color: #ffffff;
-        border-radius: 5px;
-        width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 350px;
+}
+
+.contentCategoryPizzaImg, .contentCategoryPastaImg {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+h2 ,p {
+    padding: 10px 10px 10px 20px;
+}
+
+.dish-item {
+    border-width: 1px;
+    border: solid;
+    border-color: #E5E4E2; ;
+    border-radius: 5px;
 }

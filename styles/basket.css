@@ -1,12 +1,11 @@
 .contentTotal {
-    display: flex;
+    display: flex; /*content_wrapper*/
     flex-direction: row;
-    background-color: black; /*content_wrapper*/
+    background-color: black; 
 }
 
 .contentRestaurant {
-    width: calc(100% - 308px);
-    /*padding: 16px;*/ /*content*/
+    width: calc(100% - 308px); /*content*/
     background-color: white;
 }
 
@@ -19,16 +18,20 @@
 }*/
 
 .basketStickyrail {
-    width: 300px;
+    width: 300px; /*basket_wrapper*/
     flex-grow: 1;
-    border: 5px solid green;
-    padding: 16px; /*basket_wrapper*/
+    border-width: 2px;
+    border-style: solid;
+    border-color: grey;
 }
 
 .basket {
-    width: 100%;
+    width: 100%; /*basket*/
     height: 400px;
     background-color: white;
     position: sticky;
-    top: 0; /*basket*/
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
 }
