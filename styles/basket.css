@@ -27,11 +27,19 @@
 
 .basket {
     width: 100%; /*basket*/
-    height: 400px;
+    height: 500px;
     background-color: white;
     position: sticky;
     top: 0;
+    text-align: left;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     padding: 25px;
+    box-sizing: border-box;
+}
+
+.basket-item {
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid #E5E4E2;
 }

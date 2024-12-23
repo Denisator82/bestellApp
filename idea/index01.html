@@ -13,19 +13,16 @@
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/basket.css">
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="./style01.css">
 </head>
 <body onload="init()">
+    <div class="container">
         <section class="header">
             <img class="headerLogo" src="assets/icons/logo/Logo.png">
         </section>
         <section class="contentTotal">
             <div class="contentRestaurant">
-                <div class="image-wrapper">
-                    <img class="contentRestaurantImage" src="assets/img/pizzaRestaurant.jpg" alt="bildDesPizzaRestaurant">
-                    <img class="companyIcon" src="assets/icons/logo/companyIcon.png" alt="companyIcon">
-                </div>
+                <img class="contentRestaurantImage" src="assets/img/pizzaRestaurant.jpg" alt="bildDesPizzaRestaurant">
                 <div class="contentRestaurantHead">    
                 </div>
                 <div class="contentRestaurantTitelbox">
@@ -37,14 +34,13 @@
                     <a href="#pasta" class="nav-link" onclick="toggleSection('pasta')">Pasta</a>
                     <a href="#dessert" class="nav-link" onclick="toggleSection('dessert')">Dessert</a>
                 </div>
-                    <div class="contentRestaurantCategory hidden" id="pizza">
-                    </div>
-                    <div class="contentRestaurantCategory hidden" id="pasta">    
-                    </div>
-                    <div class="contentRestaurantCategory hidden" id="dessert">    
-                    </div>
+                <div class="contentRestaurantCategory hidden" id="pizza">
                 </div>
-            </div>    
+                <div class="contentRestaurantCategory hidden" id="pasta">    
+                </div>
+                <div class="contentRestaurantCategory hidden" id="dessert">    
+                </div>
+            </div>
             <div class="basketStickyrail">
                 <div class="basket"><h1>Warenkorb</h1></div>
             </div>
@@ -53,5 +49,6 @@
         </section>
         <section class="footer"> ...footersection...   
         </section>
+    </div>
 </body>
 </html>

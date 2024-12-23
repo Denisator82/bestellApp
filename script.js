@@ -1,8 +1,12 @@
+// Basket-Array außerhalb der Funktionen definieren
+let basket = [];
+
 function init() { 
     renderPizzaData(); // Lade und rendere Pizza-Daten
     renderPastaData(); // Lade und rendere Pasta-Daten
     renderDessertData(); // Lade und rendere Dessert-Daten
     toggleSection('pizza'); // Standardmäßig Pizza anzeigen
+    renderBasket(); // Warenkorb initialisieren
 }
 
 function renderPizzaData() {
@@ -21,6 +25,7 @@ function renderPizzaData() {
                 <h2>${dish.name}</h2>
                 <p>${dish.description}</p>
                 <p>Preis: ${dish.price.toFixed(2)} €</p>
+                <button onclick="addToBasket('${dish.name}', ${dish.price}, 1)">In den Warenkorb</button>
             </div>
         `;
     }
@@ -44,6 +49,7 @@ function renderPastaData() {
                 <h2>${dish.name}</h2>
                 <p>${dish.description}</p>
                 <p>Preis: ${dish.price.toFixed(2)} €</p>
+                <button onclick="addToBasket('${dish.name}', ${dish.price}, 1)">In den Warenkorb</button>
             </div>
         `;
     }
@@ -67,11 +73,44 @@ function renderDessertData() {
                 <h2>${dish.name}</h2>
                 <p>${dish.description}</p>
                 <p>Preis: ${dish.price.toFixed(2)} €</p>
+                <button onclick="addToBasket('${dish.name}', ${dish.price}, 1)">In den Warenkorb</button>
             </div>
         `;
     }
 
     dessertContainer.innerHTML += dessertHTML;
+}
+
+function addToBasket(name, price, amount) {
+    // Überprüfen, ob das Gericht bereits im Warenkorb ist
+    const existingItem = basket.find(item => item.name === name);
+    if (existingItem) {
+        // Wenn es bereits im Warenkorb ist, erhöhe den amount
+        existingItem.amount += amount;
+    } else {
+        // Andernfalls füge das Gericht zum Warenkorb hinzu
+        basket.push({ name, price, amount });
+    }
+    renderBasket();
+}
+
+function renderBasket() {
+    const basketContainer = document.querySelector('.basket');
+    basketContainer.innerHTML = '<h1>Warenkorb</h1>';
+
+    let basketHTML = '';
+    for (let i = 0; i < basket.length; i++) {
+        const item = basket[i];
+        basketHTML += `
+            <div class="basket-item">
+                <p>${item.name}</p>
+                <p>Preis: ${item.price.toFixed(2)} €</p>
+                <p>Menge: ${item.amount}</p>
+            </div>
+        `;
+    }
+
+    basketContainer.innerHTML += basketHTML;
 }
 
 function toggleSection(sectionId) {
