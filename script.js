@@ -1,10 +1,10 @@
 function init() { 
-    loadPizzaData(); // Lade Pizza-Daten
-    loadPastaData(); // Lade Pasta-Daten
+    renderPizzaData(); // Lade und rendere Pizza-Daten
+    renderPastaData(); // Lade und rendere Pasta-Daten
     showSection('pizza'); // Standardmäßig Pizza anzeigen
 }
 
-function loadPizzaData() {
+function renderPizzaData() {
     const pizzaContainer = document.getElementById('pizza');
     pizzaContainer.innerHTML = `
         <img src="${myDishes.Pizza.img}" alt="Pizza" class="contentCategoryPizzaImg">
@@ -27,7 +27,7 @@ function loadPizzaData() {
     pizzaContainer.innerHTML += pizzaHTML;
 }
 
-function loadPastaData() {
+function renderPastaData() {
     const pastaContainer = document.getElementById('pasta');
     pastaContainer.innerHTML = `
         <img src="${myDishes.Pasta.img}" alt="Pasta" class="contentCategoryPastaImg">
