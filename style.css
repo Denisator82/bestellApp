@@ -60,7 +60,7 @@ h1 {
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 5px;
-    width: 350px;
+    width: 100%;
 }
 
 .contentCategoryPizzaImg, .contentCategoryPastaImg {
@@ -80,8 +80,15 @@ p {
 }
 
 .dish-item {
+    object-fit: cover;
+    width: 100%;
     border-width: 1px;
     border: solid;
     border-color: #E5E4E2; ;
     border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none; 
 }

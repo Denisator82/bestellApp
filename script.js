@@ -1,8 +1,16 @@
+function init() { 
+    loadPizzaData(); // Lade Pizza-Daten
+    loadPastaData(); // Lade Pasta-Daten
+    showSection('pizza'); // Standardmäßig Pizza anzeigen
+}
+
 function loadPizzaData() {
     const pizzaContainer = document.getElementById('pizza');
-    pizzaContainer.innerHTML = '';
+    pizzaContainer.innerHTML = `
+        <img src="${myDishes.Pizza.img}" alt="Pizza" class="contentCategoryPizzaImg">
+    `;
 
-    let pizzaDishes = myDishes.Pizza;
+    let pizzaDishes = myDishes.Pizza.dishes;
     let pizzaHTML = '';
 
     for (let i = 0; i < pizzaDishes.length; i++) {
@@ -14,15 +22,18 @@ function loadPizzaData() {
                 <p>Preis: ${dish.price.toFixed(2)} €</p>
             </div>
         `;
-        pizzaContainer.innerHTML = pizzaHTML;
     }
+
+    pizzaContainer.innerHTML += pizzaHTML;
 }
 
 function loadPastaData() {
     const pastaContainer = document.getElementById('pasta');
-    pastaContainer.innerHTML = '';
+    pastaContainer.innerHTML = `
+        <img src="${myDishes.Pasta.img}" alt="Pasta" class="contentCategoryPastaImg">
+    `;
 
-    let pastaDishes = myDishes.Pasta;
+    let pastaDishes = myDishes.Pasta.dishes;
     let pastaHTML = '';
 
     for (let i = 0; i < pastaDishes.length; i++) {
@@ -36,11 +47,15 @@ function loadPastaData() {
         `;
     }
 
-    pastaContainer.innerHTML = pastaHTML;
+    pastaContainer.innerHTML += pastaHTML;
 }
 
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.contentRestaurantCategory');
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.add('hidden');
+    }
 
-function init() { 
-    loadPizzaData(); 
-    loadPastaData();
+    const activeSection = document.getElementById(sectionId);
+    activeSection.classList.remove('hidden');
 }
