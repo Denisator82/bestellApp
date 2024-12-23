@@ -68,5 +68,44 @@ let myDishes = {
                 "amount": 1
             }
         ]
+    },
+    "Dessert": {
+        "img": "assets/img/dessert.jpg",
+        "dishes": [
+            {
+                "name": "Tiramisu",
+                "price": 6.99,
+                "description": "Klassisches italienisches Dessert mit Löffelbiskuits, Mascarpone-Creme und einem Hauch von Kaffee und Kakao.",
+                "amount": 1
+            },
+            {
+                "name": "Panna Cotta",
+                "price": 5.99,
+                "description": "Cremiges Dessert aus Sahne, Zucker und Gelatine, oft serviert mit Beeren oder Schokoladensauce.",
+                "amount": 1
+            },
+            {
+                "name": "Cannoli",
+                "price": 4.99,
+                "description": "Knusprige Teigrollen gefüllt mit süßer Ricotta-Creme und oft garniert mit Schokoladensplittern oder kandierten Früchten.",
+                "amount": 1
+            },
+            {
+                "name": "Zabaglione",
+                "price": 7.49,
+                "description": "Luftiges Dessert aus Eigelb, Zucker und Marsala-Wein, serviert warm oder kalt.",
+                "amount": 1
+            },
+            {
+                "name": "Gelato",
+                "price": 3.99,
+                "description": "Italienisches Eis, das in verschiedenen Geschmacksrichtungen wie Vanille, Schokolade, Pistazie und Erdbeere erhältlich ist.",
+                "amount": 1
+            }
+        ]
     }
 };
+
+
+
+

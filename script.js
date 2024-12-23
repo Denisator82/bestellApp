@@ -1,7 +1,8 @@
 function init() { 
     renderPizzaData(); // Lade und rendere Pizza-Daten
     renderPastaData(); // Lade und rendere Pasta-Daten
-    showSection('pizza'); // Standardmäßig Pizza anzeigen
+    renderDessertData(); // Lade und rendere Dessert-Daten
+    toggleSection('pizza'); // Standardmäßig Pizza anzeigen
 }
 
 function renderPizzaData() {
@@ -50,7 +51,30 @@ function renderPastaData() {
     pastaContainer.innerHTML += pastaHTML;
 }
 
-function showSection(sectionId) {
+function renderDessertData() {
+    const dessertContainer = document.getElementById('dessert');
+    dessertContainer.innerHTML = `
+        <img src="${myDishes.Dessert.img}" alt="Dessert" class="contentCategoryDessertImg">
+    `;
+
+    let dessertDishes = myDishes.Dessert.dishes;
+    let dessertHTML = '';
+
+    for (let i = 0; i < dessertDishes.length; i++) {
+        const dish = dessertDishes[i];
+        dessertHTML += `
+            <div class="dish-item">
+                <h2>${dish.name}</h2>
+                <p>${dish.description}</p>
+                <p>Preis: ${dish.price.toFixed(2)} €</p>
+            </div>
+        `;
+    }
+
+    dessertContainer.innerHTML += dessertHTML;
+}
+
+function toggleSection(sectionId) {
     const sections = document.querySelectorAll('.contentRestaurantCategory');
     for (let i = 0; i < sections.length; i++) {
         sections[i].classList.add('hidden');

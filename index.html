@@ -30,12 +30,15 @@
                 <div class="restaurantRating">Bewertung (4,3 von 5 Sternen)</div>
             </div>
             <div class="contentRestaurantNavbar">
-                <a href="#pizza" class="nav-link" onclick="showSection('pizza')">Pizza</a>
-                <a href="#pasta" class="nav-link" onclick="showSection('pasta')">Pasta</a>
+                <a href="#pizza" class="nav-link" onclick="toggleSection('pizza')">Pizza</a>
+                <a href="#pasta" class="nav-link" onclick="toggleSection('pasta')">Pasta</a>
+                <a href="#dessert" class="nav-link" onclick="toggleSection('dessert')">Dessert</a>
             </div>
                 <div class="contentRestaurantCategory hidden" id="pizza">
                 </div>
                 <div class="contentRestaurantCategory hidden" id="pasta">    
+                </div>
+                <div class="contentRestaurantCategory hidden" id="dessert">    
                 </div>
             </div>
         </div>    
