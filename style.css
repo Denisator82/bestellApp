@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
 }
@@ -12,10 +12,6 @@ body {
     width: 200px;
     padding: 20px;
     display: flex;
-}
-
-.contentRestaurantTitelbox {
-    padding: 20px;
 }
 
 .image-wrapper {
@@ -39,30 +35,31 @@ body {
 
 .restaurantRating {
     color: #FFA500;
+    padding: 0px 0px 20px 20px;
 }
 
 h1 {
-    padding-bottom: 10px;
+    padding: 20px 0px 10px 20px;
 }
 
-.contentRestaurantNavbar { 
-    display: flex; 
-    gap: 20px; 
-    background-color: #E5E4E2; 
+.contentRestaurantNavbar {
+    display: flex;
+    gap: 20px;
+    background-color: #E5E4E2;
     padding: 5px 10px 5px 10px;
     width: 100%;
-} 
-
-.nav-link { 
-    text-decoration: none; 
-    font-size: 16px; 
-    font-weight: bold; 
-    padding: 5px 10px; 
-    border-radius: 4px; 
-    transition: background-color 0.3s ease; 
 }
 
-.nav-link:hover { 
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
     background-color: white;
     color: #FFA500;
 }
@@ -88,7 +85,7 @@ h2 {
 }
 
 p {
-    padding: 0px 10px 5px 20px; 
+    padding: 0px 10px 5px 20px;
 }
 
 .dish-item {
@@ -96,11 +93,53 @@ p {
     width: 100%;
     border-width: 1px;
     border: solid;
-    border-color: #E5E4E2; ;
+    border-color: #E5E4E2;
     border-radius: 5px;
     margin-bottom: 5px;
 }
 
 .hidden {
-    display: none; 
+    display: none;
 }
+
+.dish-header {
+    display: flex;
+    justify-content: space-between; /* Platz zwischen Titel und Button aufteilen */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dish-header h2 {
+    margin: 0; /* Kein Abstand, damit es gut aussieht */
+}
+
+.add-to-basket-button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px; /* Button um 5px nach links versetzen */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-basket-button:hover {
+    background-color: #ff7f00;
+}
+
+.dish-item p {
+    margin: 0 0 10px 0; /* Abstände zwischen den Texten */
+}
+
+.footer {
+    background-color: #FFA500;
+    padding: 20px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+

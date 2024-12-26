@@ -91,12 +91,6 @@ let myDishes = {
                 "amount": 1
             },
             {
-                "name": "Zabaglione",
-                "price": 7.49,
-                "description": "Luftiges Dessert aus Eigelb, Zucker und Marsala-Wein, serviert warm oder kalt.",
-                "amount": 1
-            },
-            {
                 "name": "Gelato",
                 "price": 3.99,
                 "description": "Italienisches Eis, das in verschiedenen Geschmacksrichtungen wie Vanille, Schokolade, Pistazie und Erdbeere erhältlich ist.",
