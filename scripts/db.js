@@ -69,7 +69,7 @@ let myDishes = {
             }
         ]
     },
-    "Dessert": {
+    "Desserts": {
         "img": "assets/img/dessert.jpg",
         "dishes": [
             {
