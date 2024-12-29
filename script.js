@@ -76,19 +76,20 @@ function renderBasket() {
     let basketHTML = '';
     let totalPrice = 0;
 
-    for (const [i, item] of basket.entries()) {
+    for (let i = 0; i < basket.length; i++) {
+        const item = basket[i];  // Zugriff auf das Element des Arrays mit Index i
         totalPrice += item.price * item.amount;
         basketHTML += `
             <div class="basket-item">
                 <p>${item.name}</p>
                 <p>Preis: ${item.price.toFixed(2)} €</p>
-                <p>Menge: ${item.amount}</p>
                 <button onclick="decreaseAmount(${i})">-</button>
+                <p>${item.amount}x</p>
                 <button onclick="increaseAmount(${i})">+</button>
                 <button onclick="removeFromBasket(${i})">Entfernen</button>
             </div>
         `;
-    }
+    }    
 
     const delivery = totalPrice > freeDeliveryThreshold ? 0 : deliveryCost;
     const finalPrice = totalPrice + delivery;

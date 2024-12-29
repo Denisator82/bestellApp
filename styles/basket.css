@@ -1,15 +1,5 @@
-.contentTotal {
-    display: flex; /*content_wrapper*/
-    flex-direction: row;
-}
-
-.contentRestaurant {
-    width: calc(100% - 508px); /*content*/
-    background-color: white;
-}
-
 .basketStickyrail {
-    width: 500px; /*basket_wrapper*/
+    width: 350px; /*basket_wrapper*/
     flex-grow: 1;
     border-width: 2px;
     border-style: solid;
@@ -56,7 +46,6 @@
 }
 
 .total-price {
-    padding: 10px;
     border-top: 2px solid #E5E4E2;
     margin-top: 10px;
 }
@@ -121,16 +110,17 @@
     display: block;
 }
 
-@media (max-width: 756px) {
+@media (max-width: 800px) {
     body {
         overflow-x: hidden; /* Deaktiviert den horizontalen Scrollbalken */
     }
 
     .contentRestaurant {
         width: 100%;
+        background-color: white;
     }
 
-    .basketStickyrail {
+    .basket {
         display: none; /* Verbirgt den Desktop-Warenkorb */
     }
 
