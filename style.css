@@ -19,7 +19,7 @@ body {
     width: 200px;
 }
 
-.image-wrapper {
+.imageWrapper {
     position: relative;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 .contentRestaurant {
-    width: calc(100% - 358px); /*content*/
+    width: calc(100% - 408px); /*content*/
     background-color: white;
 }
 
@@ -56,10 +56,6 @@ body {
     color: #FFA500;
 }
 
-/*h1 {
-    padding: 20px 0px 10px 20px;
-}*/
-
 .contentRestaurantNavbar {
     display: flex;
     gap: 20px;
@@ -68,7 +64,7 @@ body {
     width: 100%;
 }
 
-.nav-link {
+.navLink {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -77,7 +73,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
+.navLink:hover {
     background-color: white;
     color: #FFA500;
 }
@@ -106,7 +102,7 @@ body {
     padding: 0px 10px 5px 20px;
 }*/
 
-.dish-item {
+.dishItem {
     object-fit: cover;
     width: calc(100% - 10px);
     border-width: 1px;
@@ -121,18 +117,18 @@ body {
     display: none;
 }
 
-.dish-header {
+.dishHeader {
     display: flex;
     justify-content: space-between; /* Platz zwischen Titel und Button aufteilen */
     align-items: center;
     margin-bottom: 10px;
 }
 
-.dish-header h2 {
+.dishHeader h2 {
     margin: 0; /* Kein Abstand, damit es gut aussieht */
 }
 
-.add-to-basket-button {
+.addToBasketButton {
     background-color: #FFA500;
     color: white;
     border: none;
@@ -142,25 +138,25 @@ body {
     cursor: pointer;
 }
 
-.add-to-basket-button:hover {
+.addToBasketButton:hover {
     background-color: #ff7f00;
 }
 
-.dish-item p {
+.dishItem p {
     margin: 0 0 10px 0; /* Abstände zwischen den Texten */
 }
 
 .footer {
-/*    position: fixed;
+    position: fixed;
     bottom: 0;
-    left: 0;*/
+    left: 0;
     width: 100%;
     height: 120px;
     background-color: #FFA500;
     padding: 20px;
 }
 
-.footer-bottom {
+.footerBottom {
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #444;

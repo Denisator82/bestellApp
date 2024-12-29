@@ -65,7 +65,7 @@ function removeFromBasket(indexRemove) {
 function placeOrder() {
     basket = []; // Leert den Warenkorb
     renderBasket();
-    document.querySelector(".order-message").innerText = "Vielen Dank für Ihre Testbestellung!";
+    document.querySelector(".orderMessage").innerText = "Vielen Dank für Ihre Testbestellung!";
 }
 
 // Funktion zum Rendern des Warenkorbs
@@ -80,13 +80,17 @@ function renderBasket() {
         const item = basket[i];  // Zugriff auf das Element des Arrays mit Index i
         totalPrice += item.price * item.amount;
         basketHTML += `
-            <div class="basket-item">
-                <p>${item.name}</p>
-                <p>Preis: ${item.price.toFixed(2)} €</p>
-                <button onclick="decreaseAmount(${i})">-</button>
-                <p>${item.amount}x</p>
-                <button onclick="increaseAmount(${i})">+</button>
-                <button onclick="removeFromBasket(${i})">Entfernen</button>
+            <div class="basketItem">
+                <div class="basketItemName">
+                    <p>${item.name}</p>
+                </div>
+                <div class="basketItemControls">
+                    <button onclick="decreaseAmount(${i})">-</button>
+                    <p>${item.amount}x</p>
+                    <button onclick="increaseAmount(${i})">+</button>
+                    <p>Preis: ${item.price.toFixed(2)} €</p>
+                    <button onclick="removeFromBasket(${i})">Entfernen</button>
+                </div>
             </div>
         `;
     }    
@@ -95,18 +99,18 @@ function renderBasket() {
     const finalPrice = totalPrice + delivery;
 
     const footerHTML = `
-        <div class="basket-footer">
-            <div class="total-price">
+        <div class="basketFooter">
+            <div class="totalPrice">
                 <p><strong>Gesamtpreis:</strong> ${totalPrice.toFixed(2)} €</p>
                 <p><strong>Lieferkosten:</strong> ${delivery.toFixed(2)} €</p>
                 <p><strong>Endpreis:</strong> ${finalPrice.toFixed(2)} €</p>
             </div>
             <button class="placeOrderButton" onclick="placeOrder()">Bestellen</button>
-            <p class="order-message"></p>
+            <p class="orderMessage"></p>
         </div>
     `;
 
-    basketContainer.innerHTML += `<div class="basket-items">${basketHTML}</div>` + footerHTML;
+    basketContainer.innerHTML += `<div class="basketItems">${basketHTML}</div>` + footerHTML;
 }
 
 // Funktion zum Umschalten der Kategorien

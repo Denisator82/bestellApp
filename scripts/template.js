@@ -1,10 +1,10 @@
 // Template Funktionen auslagern
 function createDishHTML(dish) {
     return `
-        <div class="dish-item">
-            <div class="dish-header">
+        <div class="dishItem">
+            <div class="dishHeader">
                 <h2>${dish.name}</h2>
-                <button class="add-to-basket-button" onclick="addToBasket('${dish.name}', ${dish.price}, 1)">+</button>
+                <button class="addToBasketButton" onclick="addToBasket('${dish.name}', ${dish.price}, 1)">+</button>
             </div>
             <p>${dish.description}</p>
             <p>Preis: ${dish.price.toFixed(2)} €</p>
