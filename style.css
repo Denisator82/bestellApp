@@ -163,14 +163,22 @@ p {
     border-top: 1px solid #444;
 }
 
-@media (max-width: 820px) {
+.hidden {
+    display: none;
+}
+
+@media (max-width: 920px) {
     .contentRestaurant {
         width: 100%;
         background-color: white;
     }
 }
 
-@media (max-width: 520px) {
+
+
+
+
+@media (max-width: 620px) {
     .companyIcon {
         position: absolute;
         bottom: -25px;
