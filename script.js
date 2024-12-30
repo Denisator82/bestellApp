@@ -4,9 +4,9 @@ const freeDeliveryThreshold = 25; // Schwelle für kostenlose Lieferung
 
 // Initialisierungsfunktion
 function init() {
-    renderData('Pizza', myDishes.Pizza); // Lade und rendere Pizza-Daten
-    renderData('Pasta', myDishes.Pasta); // Lade und rendere Pasta-Daten
-    renderData('Dessert', myDishes.Desserts); // Lade und rendere Dessert-Daten
+    renderData('pizza', myDishes.pizza); // Lade und rendere Pizza-Daten
+    renderData('pasta', myDishes.pasta); // Lade und rendere Pasta-Daten
+    renderData('desserts', myDishes.desserts); // Lade und rendere Dessert-Daten
     toggleSection("pizza"); // Standardmäßig Pizza anzeigen
     renderBasket(); // Warenkorb initialisieren
 }
@@ -15,7 +15,7 @@ function init() {
 function renderData(categoryName, categoryData) {
     const container = document.getElementById(categoryName.toLowerCase());
     container.innerHTML = `
-        <img src="${categoryData.img}" alt="${categoryName}" class="contentCategory${categoryName}Img">
+        <img src="${categoryData.img}" alt="${categoryName}" class="content-category-${categoryName}-img">
     `;
     const dishes = categoryData.dishes;
     let categoryHTML = "";
@@ -62,12 +62,12 @@ function removeFromBasket(indexRemove) {
 function placeOrder() {
     basket = []; // Leert den Warenkorb
     renderBasket();
-    document.querySelector(".orderMessage").innerText = "Vielen Dank für Ihre Testbestellung!";
+    document.querySelector(".order-message").innerText = "Vielen Dank für Ihre Testbestellung!";
 }
 
 // Funktion zum Umschalten der Kategorien
 function toggleSection(sectionId) {
-    const sections = document.querySelectorAll(".contentRestaurantCategory");
+    const sections = document.querySelectorAll(".content-restaurant-category");
     for (const section of sections) {
         section.classList.add("hidden");
     }
@@ -75,11 +75,24 @@ function toggleSection(sectionId) {
     activeSection.classList.remove("hidden");
 }
 
-function toggleMobileBasket() {
-    const basketSection = document.getElementById('basketSection');
-    const restaurantContent = document.querySelector('.contentRestaurant');
+// Funktion zum Umschalten des Warenkorbs
+function toggleBasket() {
+    // Elemente auswählen
+    const basketModal = document.querySelector('.basket-center-modal');
+    const overlay = document.querySelector('.modal-overlay');
 
-    // Umschalten zwischen Warenkorb anzeigen und Restaurant-Content ausblenden
-    basketSection.classList.toggle('hidden');
-    restaurantContent.classList.toggle('hidden');
+    // Sichtbarkeit umschalten
+    basketModal.classList.toggle('visible');
+    overlay.classList.toggle('visible');
+}
+
+// Funktion zum Schließen des Warenkorbs
+function closeBasket() {
+    // Elemente auswählen
+    const basketModal = document.querySelector('.basket-center-modal');
+    const overlay = document.querySelector('.modal-overlay');
+
+    // Sichtbarkeit entfernen
+    basketModal.classList.remove('visible');
+    overlay.classList.remove('visible');
 }

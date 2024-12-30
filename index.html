@@ -9,60 +9,74 @@
     <script src="./scripts/template.js"></script>
     <script src="./script.js"></script>
 
-    <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
-    <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body onload="init()">
     <section class="header">
-        <img class="headerLogo" src="assets/icons/logo/Logo.png">
+        <img class="header-logo" src="assets/icons/logo/Logo.png">
     </section>
-    <section class="contentTotal">
+    <section class="content-total">
         <!-- Restaurant Content -->
-        <div class="contentRestaurant">
-            <div class="imageWrapper">
-                <img class="contentRestaurantImage" src="assets/img/pizzaRestaurant.jpg" alt="bildDesPizzaRestaurant">
-                <img class="companyIcon" src="assets/icons/logo/companyIcon.png" alt="companyIcon">
+        <div class="content-restaurant">
+            <div class="image-wrapper">
+                <img class="content-restaurant-image" src="assets/img/pizzaRestaurant.jpg" alt="bildDesPizzaRestaurant">
+                <img class="company-icon" src="assets/icons/logo/companyIcon.png" alt="companyIcon">
             </div>
-            <div class="contentRestaurantHead">    
+            <div class="content-restaurant-head">    
             </div>
-            <div class="contentRestaurantTitelbox">
+            <div class="content-restaurant-title-box"> <!-- geändert: titelbox -> title-box -->
                 <h1>Pizzeria da Nika</h1>
-                <div class="restaurantRating">Bewertung (4,3 von 5 Sternen)</div>
+                <div class="restaurant-rating">Bewertung (4,3 von 5 Sternen)</div>
             </div>
-            <div class="contentRestaurantNavbar">
+            <div class="content-restaurant-nav-bar"> <!-- geändert: navbar -> nav-bar -->
                 <a href="#pizza" class="nav-link" onclick="toggleSection('pizza')">Pizza</a>
                 <a href="#pasta" class="nav-link" onclick="toggleSection('pasta')">Pasta</a>
-                <a href="#dessert" class="nav-link" onclick="toggleSection('dessert')">Dessert</a>
+                <a href="#dessert" class="nav-link" onclick="toggleSection('desserts')">Dessert</a>
             </div>
-            <div class="contentRestaurantCategory hidden" id="pizza">
+            <div class="content-restaurant-category hidden" id="pizza">
             </div>
-            <div class="contentRestaurantCategory hidden" id="pasta">    
+            <div class="content-restaurant-category hidden" id="pasta">    
             </div>
-            <div class="contentRestaurantCategory hidden" id="dessert">    
+            <div class="content-restaurant-category hidden" id="desserts">    
             </div>
         </div>
         
         <!-- Basket Section (Standardmäßig sichtbar) -->
-        <div class="basketStickyrail" id="basketSection">
+        <div class="basket-sticky-rail" id="basketSection"> <!-- geändert: stickyrail -> sticky-rail -->
             <div class="basket">
                 <h1>Warenkorb</h1>
             </div>
         </div>
-
+    
         <!-- Mobile Basket Button (Nur sichtbar bei < 920px) -->
-        <button class="mobileBasketButton" onclick="toggleMobileBasket()">Warenkorb anzeigen</button>
+        <button class="mobile-basket-button" onclick="toggleMobileBasket()">Warenkorb anzeigen</button>
     </section>
-
+    
     <section class="footer">
         <h2>Über Uns</h2>
         <p>Wir bieten die besten italienischen Gerichte und liefern sie direkt zu Ihnen nach Hause.</p>
-        <div class="footerBottom">
+        <div class="footer-bottom">
             <p>&copy; 2024 Pizzeria da Nika. Alle Rechte vorbehalten.</p>
         </div>
     </section>
+    
+    <script>
+        function toggleMobileBasket() {
+            const basketSection = document.querySelector('.basket-sticky-rail'); // Korrektur: die richtige Klasse verwenden
+            const restaurantContent = document.querySelector('.content-restaurant'); // Korrektur: die richtige Klasse verwenden
+
+            if (basketSection && restaurantContent) {
+                // Umschalten zwischen Warenkorb anzeigen und Restaurant-Content ausblenden
+                basketSection.classList.toggle('hidden');
+                restaurantContent.classList.toggle('hidden');
+            } else {
+                console.error("Elemente für Basket oder Restaurant Content nicht gefunden.");
+            }
+        }
+    </script>
 </body>
 </html>
+
 

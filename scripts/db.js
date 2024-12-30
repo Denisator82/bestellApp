@@ -1,5 +1,6 @@
 let myDishes = {
-    "Pizza": {
+    // Kategorie: Pizza
+    "pizza": {
         "img": "assets/img/pizza.jpg",
         "dishes": [
             {
@@ -34,7 +35,8 @@ let myDishes = {
             }
         ]
     },
-    "Pasta": {
+    // Kategorie: Pasta
+    "pasta": {
         "img": "assets/img/pasta.jpg",
         "dishes": [
             {
@@ -69,7 +71,8 @@ let myDishes = {
             }
         ]
     },
-    "Desserts": {
+    // Kategorie: Desserts
+    "desserts": {
         "img": "assets/img/dessert.jpg",
         "dishes": [
             {

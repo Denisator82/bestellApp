@@ -1,5 +1,5 @@
-.basketStickyrail {
-    width: 500px; /*basket_wrapper*/
+.basket-sticky-rail {
+    width: 500px; /* basket-wrapper */
     flex-grow: 1;
     border-width: 2px;
     border-style: solid;
@@ -20,33 +20,33 @@
     overflow-y: auto;
 }
 
-.basketItem {
+.basket-item {
     display: flex;
     flex-direction: column;
     padding: 10px 0px;
     border-bottom: 1px solid #E5E4E2;
 }
 
-.basketItemName {
+.basket-item-name {
     margin-bottom: 10px; /* Fügt einen Abstand zwischen dem Namen und den Steuerelementen hinzu */
 }
 
-.basketItemControls {
+.basket-item-controls {
     display: flex;
     align-items: center; /* Zentriert die Elemente vertikal */
     gap: 10px; /* Abstand zwischen den Elementen */
 }
 
-.basketItemControls button, .basketItemControls p { 
+.basket-item-controls button, .basket-item-controls p { 
     margin: 0; 
 }
 
-.basketItem p {
+.basket-item p {
     margin: 5px 0;
     flex-grow: 1;
 }
 
-.basketItem button {
+.basket-item button {
     background-color: #FFA500;
     color: white;
     border: none;
@@ -56,16 +56,16 @@
     margin: 0 5px;
 }
 
-.basketItem button:hover {
+.basket-item button:hover {
     background-color: #ff7f00;
 }
 
-.totalPrice {
+.total-price {
     border-top: 2px solid #E5E4E2;
     margin-top: 10px;
 }
 
-.placeOrderButton {
+.place-order-button {
     background-color: #FFA500;
     color: white;
     border: none;
@@ -75,24 +75,24 @@
     margin-top: 10px;
 }
 
-.placeOrderButton:hover {
+.place-order-button:hover {
     background-color: #ff7f00;
 }
 
-.orderMessage {
+.order-message {
     margin-top: 20px;
     font-size: 16px;
     color: green;
 }
 
 /* Mobile Basket Button */
-.mobileBasketButton {
+.mobile-basket-button {
     display: none; /* Standardmäßig ausblenden */
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color:blue;
+    background-color: blue;
     color: white;
     border: none;
     padding: 15px 50px;
@@ -102,21 +102,52 @@
     z-index: 1000;
 }
 
-.mobileBasketButton:hover {
+.mobile-basket-button:hover {
     background-color: #ff7f00;
 }
 
 @media (max-width: 920px) {
-    .basketStickyrail {
+    .basket-sticky-rail {
         display: none; /* Verbirgt den Desktop-Warenkorb */
     }
 
-    .mobileBasketButton {
+    .mobile-basket-button {
         display: block; /* Zeigt den mobilen Warenkorb-Button */
     }
+}
 
-    .basketItemControls button {
-        padding: 8px 14px; /* Größere Klickfläche */
-        font-size: 14px; /* Etwas größere Schrift */
+@media (max-width: 920px) {
+    .basket-center-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 1001; /* Über dem mobilen Button */
+        display: none; /* Standardmäßig versteckt */
+    }
+
+    .basket-center-modal.visible {
+        display: block; /* Sichtbar machen, wenn sichtbar getoggelt */
+    }
+
+    /* Dunkler Hintergrund für Modal-Effekt */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+    }
+
+    .modal-overlay.visible {
+        display: block;
     }
 }
+
