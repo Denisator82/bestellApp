@@ -89,9 +89,9 @@ h1 {
     width: 100%;
 }
 
-.content-category-pizza-img, /* geändert: content-categoryPizzaImg */
-.content-category-pasta-img, /* geändert: content-categoryPastaImg */
-.content-category-desserts-img { /* geändert: content-categoryDessertImg */
+.content-category-pizza-img,
+.content-category-pasta-img,
+.content-category-desserts-img {
     width: 100%;
     height: 150px;
     object-fit: cover;
@@ -114,8 +114,13 @@ p {
     padding: 20px;
 }
 
+/*Ein- und Ausblenden*/
 .hidden {
     display: none;
+}
+
+.visible {
+    display: block;
 }
 
 .dish-header {
@@ -165,8 +170,13 @@ p {
         width: 100%;
         background-color: white;
     }
+
+    .basket-sticky-rail {
+        display: none;
+    }
 }
 
+/*Seite verkleiner für Mobil @media 620px*/
 @media (max-width: 620px) {
     .company-icon {
         position: absolute;

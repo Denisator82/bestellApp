@@ -8,7 +8,7 @@
 
 .basket {
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-color: white;
     position: sticky;
     top: 0;
@@ -89,17 +89,17 @@
 .mobile-basket-button {
     display: none; /* Standardmäßig ausblenden */
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     background-color: blue;
     color: white;
     border: none;
-    padding: 15px 50px;
+    padding: 10px 50px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .mobile-basket-button:hover {
@@ -107,47 +107,36 @@
 }
 
 @media (max-width: 920px) {
-    .basket-sticky-rail {
-        display: none; /* Verbirgt den Desktop-Warenkorb */
-    }
-
     .mobile-basket-button {
         display: block; /* Zeigt den mobilen Warenkorb-Button */
     }
-}
 
-@media (max-width: 920px) {
-    .basket-center-modal {
+    .basket {
+        height: 500px;
+    }
+
+    .basket-sticky-rail {
+        display: none;
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        padding: 20px;
-        z-index: 1001; /* Über dem mobilen Button */
-        display: none; /* Standardmäßig versteckt */
+        transform: translate(-50%, -50%); /* Zentriert den Warenkorb */
+        width: 90%;
+        height: auto;
+        z-index: 1002; /* Über anderen Inhalten */
+        background-color: white; /* Hintergrundfarbe */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatten */
     }
 
-    .basket-center-modal.visible {
-        display: block; /* Sichtbar machen, wenn sichtbar getoggelt */
+    .basket-sticky-rail.visible {
+        display: block; /* Sichtbar machen, wenn 'visible' */
     }
 
-    /* Dunkler Hintergrund für Modal-Effekt */
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        display: none;
+    .basket-sticky-rail.visible {
+        display: block; /* Sichtbar, wenn aktiviert */
     }
 
-    .modal-overlay.visible {
-        display: block;
+    .content-restaurant {
+        transition: opacity 0.3s ease;
     }
 }
-

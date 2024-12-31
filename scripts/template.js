@@ -1,4 +1,3 @@
-// Template Funktionen auslagern
 function createDishHTML(dish) {
     return `
         <div class="dish-item">

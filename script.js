@@ -75,24 +75,21 @@ function toggleSection(sectionId) {
     activeSection.classList.remove("hidden");
 }
 
-// Funktion zum Umschalten des Warenkorbs
-function toggleBasket() {
-    // Elemente auswählen
-    const basketModal = document.querySelector('.basket-center-modal');
-    const overlay = document.querySelector('.modal-overlay');
+function toggleMobileBasket() {
+    const basketSection = document.querySelector('.basket-sticky-rail');
+    const restaurantContent = document.querySelector('.content-restaurant');
 
-    // Sichtbarkeit umschalten
-    basketModal.classList.toggle('visible');
-    overlay.classList.toggle('visible');
-}
-
-// Funktion zum Schließen des Warenkorbs
-function closeBasket() {
-    // Elemente auswählen
-    const basketModal = document.querySelector('.basket-center-modal');
-    const overlay = document.querySelector('.modal-overlay');
-
-    // Sichtbarkeit entfernen
-    basketModal.classList.remove('visible');
-    overlay.classList.remove('visible');
+    if (basketSection && restaurantContent) {
+        // Prüfen, ob die Bildschirmbreite unter 920px liegt
+        if (window.innerWidth <= 920) {
+            basketSection.classList.toggle('visible');
+            
+            // Content halbtransparent machen, wenn der Warenkorb sichtbar ist
+            if (basketSection.classList.contains('visible')) {
+                restaurantContent.style.opacity = "0.5";
+            } else {
+                restaurantContent.style.opacity = "1";
+            }
+        }
+    }
 }

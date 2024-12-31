@@ -18,7 +18,6 @@
         <img class="header-logo" src="assets/icons/logo/Logo.png">
     </section>
     <section class="content-total">
-        <!-- Restaurant Content -->
         <div class="content-restaurant">
             <div class="image-wrapper">
                 <img class="content-restaurant-image" src="assets/img/pizzaRestaurant.jpg" alt="bildDesPizzaRestaurant">
@@ -26,11 +25,11 @@
             </div>
             <div class="content-restaurant-head">    
             </div>
-            <div class="content-restaurant-title-box"> <!-- geändert: titelbox -> title-box -->
+            <div class="content-restaurant-title-box">
                 <h1>Pizzeria da Nika</h1>
                 <div class="restaurant-rating">Bewertung (4,3 von 5 Sternen)</div>
             </div>
-            <div class="content-restaurant-nav-bar"> <!-- geändert: navbar -> nav-bar -->
+            <div class="content-restaurant-nav-bar">
                 <a href="#pizza" class="nav-link" onclick="toggleSection('pizza')">Pizza</a>
                 <a href="#pasta" class="nav-link" onclick="toggleSection('pasta')">Pasta</a>
                 <a href="#dessert" class="nav-link" onclick="toggleSection('desserts')">Dessert</a>
@@ -42,15 +41,11 @@
             <div class="content-restaurant-category hidden" id="desserts">    
             </div>
         </div>
-        
-        <!-- Basket Section (Standardmäßig sichtbar) -->
-        <div class="basket-sticky-rail" id="basketSection"> <!-- geändert: stickyrail -> sticky-rail -->
+        <div class="basket-sticky-rail" id="basketSection">
             <div class="basket">
                 <h1>Warenkorb</h1>
             </div>
         </div>
-    
-        <!-- Mobile Basket Button (Nur sichtbar bei < 920px) -->
         <button class="mobile-basket-button" onclick="toggleMobileBasket()">Warenkorb anzeigen</button>
     </section>
     
@@ -61,21 +56,6 @@
             <p>&copy; 2024 Pizzeria da Nika. Alle Rechte vorbehalten.</p>
         </div>
     </section>
-    
-    <script>
-        function toggleMobileBasket() {
-            const basketSection = document.querySelector('.basket-sticky-rail'); // Korrektur: die richtige Klasse verwenden
-            const restaurantContent = document.querySelector('.content-restaurant'); // Korrektur: die richtige Klasse verwenden
-
-            if (basketSection && restaurantContent) {
-                // Umschalten zwischen Warenkorb anzeigen und Restaurant-Content ausblenden
-                basketSection.classList.toggle('hidden');
-                restaurantContent.classList.toggle('hidden');
-            } else {
-                console.error("Elemente für Basket oder Restaurant Content nicht gefunden.");
-            }
-        }
-    </script>
 </body>
 </html>
 
